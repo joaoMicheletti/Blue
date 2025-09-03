@@ -70,5 +70,13 @@
       Seu navegador não suporta vídeos em HTML5.
     </video>
   </main>
+  <script>
+    const largura = window.innerWidth;
+    console.log(largura)
+    if(largura < 700){
+      let elemento = document.querySelector('#XXX');
+      elemento.src = 'assets/Mobile.mp4'
+    }
+  </script>
 </body>
 </html>
