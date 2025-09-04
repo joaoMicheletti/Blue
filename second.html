@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <title>Blue Ocean</title>
+
+  <!-- Fonte elegante/visível -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
   <style>
     * {
       margin: 0;
@@ -13,36 +17,59 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --text-color: #ffffff;
+      --shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text-color);
+      background: #000;
+    }
+
     #Main {
       width: 100%;
       height: 100vh;
       overflow: hidden;
       position: relative;
+      isolation: isolate; /* garante camadas corretas */
     }
 
-    /* vídeo em tela cheia */
+    /* vídeo em tela cheia (fundo) */
     #Main video.bg {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
+      inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      z-index: -1; /* atrás do header e do vídeo central */
-      filter: blur(8px); /* aplica blur */
-      scale: 1.05; /* evita bordas visíveis do blur */
+      z-index: -2;
+      filter: blur(1px);        /* antes: 8px */
+      transform: scale(1.02);   /* antes: 1.05 */
+    }
+
+    /* leve máscara para contraste do texto */
+    #Main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* antes: 0.55 / 0.25 / 0.35 */
+    background: linear-gradient(
+      90deg,
+      rgba(0,0,0,0.28) 0%,
+      rgba(0,0,0,0.12) 50%,
+      rgba(0,0,0,0.18) 100%
+    );
+    z-index: -1;
     }
 
     #Header {
       width: 100%;
       height: 60px;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: var(--shadow);
       position: fixed;
       top: 0;
       left: 0;
@@ -56,47 +83,109 @@
       padding: 5px 15px;
     }
 
-    /* container central do vídeo com som */
-    #DivVideoSond {
+    /* HERO (texto animado) */
+    #Hero {
       position: relative;
       z-index: 11;
+      height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100%;
+      padding: 0 6vw;
     }
 
-    #DivVideoSond video {
-      width: 80%;
+    /* Desktop: texto alinhado à esquerda (default) */
+    .hero-text {
       max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-      background: #000;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.45);
+      line-height: 1.25;
+      font-weight: 600;
+      font-size: clamp(24px, 4vw, 44px);
     }
 
+    /* Cursor piscando */
+    .caret {
+      display: inline-block;
+      width: 0.08em;
+      margin-left: 0.08em;
+      background: currentColor;
+      animation: blink 1s steps(1, end) infinite;
+      vertical-align: -0.08em;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+
+    /* Mobile: centralizar o texto */
     @media (max-width: 768px) {
-      #DivVideoSond video {
-        width: 95%;
+      #Hero {
+        justify-content: center;
+        text-align: center;
+        padding: 0 7vw;
       }
+      .hero-text {
+        max-width: 95%;
+      }
+    }
+
+    /* Acessibilidade: respeitar redução de animação */
+    @media (prefers-reduced-motion: reduce) {
+      .caret { display: none; }
     }
   </style>
 </head>
 <body>
   <main id="Main">
     <header id="Header">
-      <img src="./assets/blueLog.png" alt="Logo Blue ocean" />
+      <img src="./assets/blueLog.png" alt="Logo Blue Ocean" />
     </header>
 
     <!-- vídeo em loop tela cheia (BG com blur) -->
     <video class="bg" autoplay muted loop playsinline>
-      <source src="assets/movieHome.mp4" type="video/mp4">
+      <source src="assets/second.mp4" type="video/mp4">
       Seu navegador não suporta vídeos em HTML5.
     </video>
 
-    <!-- vídeo central com som -->
-    <div id="DivVideoSond">
-      <video controls src="assets/movieHome.mp4"></video>
-    </div>
+    <!-- HERO com texto animado -->
+    <section id="Hero" aria-live="polite">
+      <h1 class="hero-text">
+        <span id="typewriter"></span><span class="caret" aria-hidden="true"></span>
+      </h1>
+    </section>
   </main>
+
+  <script>
+    (function () {
+      const text = "Estamos inovando e preparando um novo site, onde diferenciação e inovação guiam o caminho";
+      const el = document.getElementById('typewriter');
+      const caret = document.querySelector('.caret');
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) {
+        el.textContent = text;
+        if (caret) caret.style.display = 'none';
+        return;
+      }
+
+      let i = 0;
+      const speed = 35; // velocidade de digitação (ms por caractere)
+
+      function type() {
+        if (i < text.length) {
+          el.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        } else {
+          // mantém o cursor piscando; remova a linha abaixo se quiser parar
+          // caret.style.display = 'none';
+        }
+      }
+
+      // inicia após o carregamento do DOM
+      document.addEventListener('DOMContentLoaded', type);
+      // fallback caso o evento já tenha disparado
+      if (document.readyState !== 'loading') type();
+    })();
+  </script>
 </body>
 </html>
