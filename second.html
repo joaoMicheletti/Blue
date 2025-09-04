@@ -170,18 +170,19 @@
       }
 
       let i = 0;
-      const speed = 100; // velocidade de digitação (ms por caractere)
+      const speed = 110; // velocidade de digitação (ms por caractere)
 
       function type() {
         if (i < text.length) {
-          el.textContent += text.charAt(i);
+          const ch = text.charAt(i);
+          el.textContent += ch;
           i++;
-          setTimeout(type, speed);
-        } else {
-          // mantém o cursor piscando; remova a linha abaixo se quiser parar
-          // caret.style.display = 'none';
+          let delay = speed;
+          if (",.;!?".includes(ch)) delay += 250; // pausa extra em pontuação
+          setTimeout(type, delay);
         }
       }
+
 
       // inicia após o carregamento do DOM
       document.addEventListener('DOMContentLoaded', type);
