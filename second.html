@@ -119,9 +119,11 @@
     /* Mobile: centralizar o texto */
     @media (max-width: 768px) {
       #Hero {
+        
         justify-content: center;
         text-align: center;
         padding: 0 7vw;
+        margin-top: -20px;
       }
       .hero-text {
         max-width: 95%;
@@ -168,7 +170,7 @@
       }
 
       let i = 0;
-      const speed = 80; // velocidade de digitação (ms por caractere)
+      const speed = 100; // velocidade de digitação (ms por caractere)
 
       function type() {
         if (i < text.length) {
