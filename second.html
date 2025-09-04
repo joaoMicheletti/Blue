@@ -142,7 +142,7 @@
 
     <!-- vídeo em loop tela cheia (BG com blur) -->
     <video class="bg" autoplay muted loop playsinline>
-      <source src="assets/second.mp4" type="video/mp4">
+      <source id="XXX" src="assets/second.mp4" type="video/mp4">
       Seu navegador não suporta vídeos em HTML5.
     </video>
 
@@ -168,7 +168,7 @@
       }
 
       let i = 0;
-      const speed = 35; // velocidade de digitação (ms por caractere)
+      const speed = 80; // velocidade de digitação (ms por caractere)
 
       function type() {
         if (i < text.length) {
@@ -186,6 +186,14 @@
       // fallback caso o evento já tenha disparado
       if (document.readyState !== 'loading') type();
     })();
+  </script>
+  <script>
+    const largura = window.innerWidth;
+    console.log(largura)
+    if(largura < 700){
+      let elemento = document.querySelector('#XXX');
+      elemento.src = 'assets/mobile.mp4'
+    }
   </script>
 </body>
 </html>
