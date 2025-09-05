@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+  <title>Blue Ocean</title>
+  <link rel="stylesheet" href="index.css">
+  
+</head>
+<body>
+  <main id="Main">
+    <header id="Header">
+      <img id="logo" src="./assets/blueLog.png" alt="Logo Blue ocean" />
+      <div id="SubHeader">
+        <ul>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+          <li>
+            <a href="#">Olá Link aqui</a>
+          </li>
+        </ul>
+
+      </div>
+      <div id="idioma">
+        <div class="idioma">
+          <img class="idiomaIcon" onclick="Language('usa')" src="./assets/idiomas/usa.png" alt="usaidioma"/>
+        </div>
+        <div  class="idioma">
+          <img class="idiomaIcon" onclick="Language('es')" src="./assets/idiomas/spanha.png" alt="usaidioma"/>
+        </div>
+        <div class="idioma">
+          <img class="idiomaIcon" onclick="Language('br')" src="./assets/idiomas/brasil.png" alt="usaidioma"/>
+        </div>
+      </div>
+    </header>
+
+    <!-- vídeo em loop tela cheia -->
+    <video autoplay muted loop playsinline>
+      <source id="XXX" src="../assets/primari.mp4" type="video/mp4">
+    </video>
+  </main>
+  <script>
+    // selecionado o idioma da PAgina
+    function Language(e){
+      alert(e);
+      console.log(e)
+    }
+  </script>
+  <script>
+    const largura = window.innerWidth;
+    console.log(largura)
+    if(largura < 700){
+      let elemento = document.querySelector('#XXX');
+      elemento.src = 'assets/mobile.mp4'
+    }
+  </script>
+</body>
+</html>
