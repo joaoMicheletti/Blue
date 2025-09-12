@@ -6,37 +6,36 @@
   <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
   <title>Blue Ocean</title>
   <link rel="stylesheet" href="index.css">
-  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <main id="Main">
     <header id="Header">
-      <img id="logo" src="./assets/blueLog.png" alt="Logo Blue ocean" />
+      <a href="#Main"><img id="logo"  src="./assets/blueLog.png" alt="Logo Blue ocean" /></a>
       <div id="SubHeader">
         <ul>
           <li>
-            <a href="#">Olá Link aqui</a>
+            <a href="#Main">Pagina Inicial</a>
           </li>
           <li>
-            <a href="#">Olá Link aqui</a>
+            <a href="#Sobre">Sobre</a>
           </li>
           <li>
-            <a href="#">Olá Link aqui</a>
+            <a href="#Atuacao">Inscriçõs</a>
           </li>
           <li>
-            <a href="#">Olá Link aqui</a>
+            <a target="_blank" href="https://blueoceaneventos.com.br/gasenergyweek/">Gasenergyweek</a>
           </li>
           <li>
-            <a href="#">Olá Link aqui</a>
+            <a target="_blank" href="https://blueoceaneventos.com.br/oemenergy/">O&M energy</a>
           </li>
           <li>
-            <a href="#">Olá Link aqui</a>
+            <a href="#">Projetos Online</a>
           </li>
           <li>
-            <a href="#">Olá Link aqui</a>
-          </li>
-          <li>
-            <a href="#">Olá Link aqui</a>
+            <a href="#contato">Contato</a>
           </li>
         </ul>
 
@@ -45,34 +44,558 @@
         <div class="idioma">
           <img class="idiomaIcon" onclick="Language('usa')" src="./assets/idiomas/usa.png" alt="usaidioma"/>
         </div>
-        <div  class="idioma">
-          <img class="idiomaIcon" onclick="Language('es')" src="./assets/idiomas/spanha.png" alt="usaidioma"/>
-        </div>
         <div class="idioma">
           <img class="idiomaIcon" onclick="Language('br')" src="./assets/idiomas/brasil.png" alt="usaidioma"/>
         </div>
       </div>
+      <img onclick="MenuMobile()" id="menuMobile" src="assets/menuMobile.webp" alt="iconemobile"/>
+      <div  id="divMenuMobile">
+        <ul>
+          <li>
+            <a href="#Main">Pagina Inicial</a>
+          </li>
+          <li>
+            <a href="#Sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#Atuacao">Inscriçõs</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://blueoceaneventos.com.br/gasenergyweek/">Gasenergyweek</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://blueoceaneventos.com.br/oemenergy/">O&M energy</a>
+          </li>
+          <li>
+            <a href="#">Projetos Online</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+        </ul>
+        <button onclick="MenuMobile()" id="subir">^</button>
+      </div>
     </header>
 
+    <div id="headLine">
+      <p id="titleHeadLine">Seu negócio, nossa missão.</p>
+      <p id="subTitleHGeadLine">Eventos que aceleram negócios, encurtam ciclos de vendas</p>
+      <div id="buttonCtaHome">
+        <button class="btn4"><a style="text-decoration: none;" href="#Contato">Quero acelerar meu negócio</a></button>
+        <button class="btn4"><a style="text-decoration: none;" href="#depoimentos">Conheça nossos cases</a></button>
+      </div>
+    </div>
+    <div id="divIconWhats">
+      <a target="_blank" href="https://wa.me/5511973872491"><img id="iconWhtas"  src="assets/iconewhats.webp"/></a>
+    </div>
+    
+
+    <div id="gradiente"></div>
     <!-- vídeo em loop tela cheia -->
     <video autoplay muted loop playsinline>
-      <source id="XXX" src="../assets/primari.mp4" type="video/mp4">
+      <source id="XXX" src="assets/homevideo.mp4" type="video/mp4">
     </video>
+    
   </main>
+  <section id="barraSeparacao">
+    <div class="img-seta"></div>
+    <!-- conteúdo da seção -->
+  </section>
+
+
+  <section id="Sobre">
+    <h1>Sobre Nós</h1>
+    <div id="ContainerSobreBlue">
+      <div id="ImgSobreBlue">
+        <video controls loop playsinline>
+        <source  src="assets/homevideo.mp4" type="video/mp4">
+      </video>
+      </div>
+      <div id="TxtSobreBlue">
+        <p id="txtCorpoSobreBlue">
+          Somos <D class="destaque">especialistas</D> em idealizar e realizar eventos que ultrapassam 
+          <D class="destaque">limites</D> e exploram diferentes mercados. Embora atuemos fortemente em 
+          Gás Natural e Energia – renovável e não renovável – nossa essência é 
+          expandir possibilidades em diversos setores.
+          Com nossa equipe dedicada, temos presença nacional e atendemos 
+          clientes internacionais no Brasil, preparados para escalar globalmente. 
+          Nossa força está em três pilares: Marketing, Comercial e Inovação, 
+          que sustentam projetos com impacto real e duradouro.
+          Nascemos da experiência de líderes de multinacionais de eventos 
+          corporativos e trazemos no DNA a estratégia do Oceano Azul, criando 
+          soluções únicas para mercados inexplorados. Já conquistamos espaço 
+          em áreas como energia eólica, odontologia e educação, sempre com 
+          autenticidade e diferenciação.
+          Nosso propósito é transformar cada evento em uma experiência que 
+          gera valor, conexões e novas oportunidades para clientes e parceiros.
+        </p>
+      </div>
+    </div>
+
+    <div class="missaoVisaoValores">
+      <img class="imgMissaoVisaoValores" src="./assets/mission.webp" alt="foto ilustrativa"/>
+      <div class="textoMissaoVisaoValores">
+        <p>
+          <strong>Missão Blue</strong><br/>
+          Acelerar os negócios de nossos clientes por meio da criação e realização de 
+          eventos inovadores, capazes de gerar conexões de valor, encurtar processos 
+          de vendas e abrir novas oportunidades de mercado, sempre com foco no cliente, 
+          em seus objetivos e no impacto positivo para todos os stakeholders.
+        </p>
+      </div>
+    </div>
+
+    <div id="inverte" class="missaoVisaoValores">
+      <div class="textoMissaoVisaoValores">
+        <p>
+          <strong>Visão Blue</strong>  <br/>
+          Ser reconhecida como a empresa definitiva em encontros de conteúdo, networking 
+          e negócios, referência em inovação, excelência e geração de valor real e 
+          perceptível para empresas, líderes e setores em que atuamos, expandindo 
+          continuamente nossas fronteiras para o cenário global.</p>
+      </div>
+      <img class="imgMissaoVisaoValores" src="./assets/vision.webp" alt="foto ilustrativa"/>
+    </div>
+
+    <div class="missaoVisaoValores">
+      <img class="imgMissaoVisaoValores" src="./assets/valores.webp" alt="foto ilustrativa"/>
+      <div class="textoMissaoVisaoValores">
+        <p>
+          <strong>Valores Blue</strong> <br/>
+          
+          <U>Excelência:</U> como princípio inegociável em tudo o que fazemos.<br/>
+
+          <U>Integridade:</U> transparência e ética em cada decisão e relacionamento.<br/>
+
+          <U>Respeito:</U> valorização das pessoas e criação de um ambiente seguro, inclusivo e colaborativo.<br/>
+
+          <U>Foco no Cliente:</U> cada projeto é guiado pelo que realmente agrega valor.<br/>
+
+          <U>Inovação:</U> busca constante por diferenciação e projetos em mercados inexplorados.<br/>
+
+          <U>Coletividade e Autonomia:</U> mais respeito, menos hierarquia, incentivando iniciativa e colaboração.<br/>
+
+          <U>Autenticidade:</U> assimetria em relação à concorrência, mantendo nossa identidade única.<br/>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Diferencial">
+    <h1>O que nos move</h1>
+    <p>“Não criamos apenas eventos. Criamos oportunidades reais de negócios.”</p>
+    <section class="marquee" aria-label="lista de cards rolantes">
+      <div class="marquee__track">
+        <!-- >>> adicione/edite seus cards AQUI <<< -->
+        <div class="card">
+          <img class="imgCArdDiferencial" src="assets/focoNoCliente.webp" alt="img card ilustrativa"/>
+          <p class="txtCard">Foco no cliente</p>
+        </div>
+        <div class="card">
+          <img class="imgCArdDiferencial" src="assets/conexoes.webp" alt="img card ilustrativa"/>
+          <p class="txtCard">Conexões de alto nível</p>
+        </div>
+        <div class="card">
+          <img class="imgCArdDiferencial" src="assets/xp.webp" alt="img card ilustrativa"/>
+          <p class="txtCard">Experiência memorável</p>
+        </div>
+        <div class="card">
+          <img class="imgCArdDiferencial" src="assets/ambiente.webp" alt="img card ilustrativa"/>
+          <p class="txtCard">Ambiente leve</p>
+        </div>
+        <!-- ^^^ adicione quantos quiser; o script duplica a sequência ^^^ -->
+      </div>
+    </section>
+  </section>
+
+  <section id="Atuacao">
+    <h1>A Blue Ocean tem em seu DNA a Estratégia do Oceano Azul.</h1>
+    <div id="ContainerTxtAtuacao">
+      <p class="AtuacaoP">
+        Tudo o que fazemos nasce do desejo de inovar e enxergar o diferente. 
+        Mas é a experiência do cliente que, como bússola, orienta e dá sentido a cada projeto que criamos.
+      </p><br/>
+      <p class="AtuacaoP">
+        Tendo a informação, o networking e as oportunidades de negócios como pilares, a Blue Ocean conecta-se 
+        a clientes que enxergam, na assimetria do óbvio, a chance de transformar conexões em resultados mais 
+        reais, expressivos e duradouros.
+      </p>
+    </div>
+
+    <section class="py-12 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <a href="https://blueoceaneventos.com.br/gasenergyweek/" target="_blank" class="flex-1 relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300 group">
+                        <img src="assets/gasenergyweek.webp" alt="gasenergyweek" class="w-full h-64 md:h-80 object-cover">
+                        <div class="absolute inset-0 bg-orange-900 bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white text-2xl md:text-3xl font-bold group-hover:scale-105 transition duration-300">Gas&energyweek</h3>
+                        </div>
+                    </a>
+                    <a href="https://ch-terra-maquinas.netlify.app/" target="_blank" class="flex-1 relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300 group">
+                        <img src="assets/oem.webp" alt="O&M energy" class="w-full h-64 md:h-80 object-cover">
+                        <div class="absolute inset-0 bg-orange-900 bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white text-2xl md:text-3xl font-bold group-hover:scale-105 transition duration-300">O&M energy</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="partners">
+      <!-- Faixa 1 (esquerda -> direita) -->
+      <div class="row row-a" aria-label="parceiros linha A">
+        <div class="track">
+          <div class="logo"><img src="assets/clientes/beckhoff.webp" alt="Petrobras"></div>
+          <div class="logo"><img src="assets/clientes/servicenow.webp" alt="TBG"></div>
+          <div class="logo"><img src="assets/clientes/genesys.webp" alt="ENEVA"></div>
+          <div class="logo"><img src="assets/clientes/blip.webp" alt="Andritz"></div>
+          <div class="logo"><img src="assets/clientes/axix.webp" alt="Emerson"></div>
+          <!-- adicione mais logos aqui -->
+        </div>
+      </div>
+
+      <!-- Faixa 2 (direita -> esquerda) -->
+      <div class="row row-b" aria-label="parceiros linha B">
+        <div class="track">
+          <div class="logo"><img src="assets/clientes/beckhoff.webp" alt="Petrobras"></div>
+          <div class="logo"><img src="assets/clientes/servicenow.webp" alt="TBG"></div>
+          <div class="logo"><img src="assets/clientes/genesys.webp" alt="ENEVA"></div>
+          <div class="logo"><img src="assets/clientes/blip.webp" alt="Andritz"></div>
+          <div class="logo"><img src="assets/clientes/axix.webp" alt="Emerson"></div>
+          <!-- adicione mais logos aqui -->
+        </div>
+      </div>
+    </section>
+
+    <section class="bo-numbers" id="numeros" aria-label="Números da Blue Ocean">
+      <h2 class="bn-title">Nossos números</h2>
+      <div class="bn-grid">
+        <!-- Card 1 -->
+        <div class="bn-card">
+          <p class="bn-number">+50%</p>
+          <p class="bn-text">das 100 maiores empresas do Brasil já participaram de nossos encontros</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bn-card">
+          <p class="bn-number">+10.000</p>
+          <p class="bn-text">participantes em encontros de informação e negócios</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bn-card">
+          <p class="bn-number">Milhares</p>
+          <p class="bn-text">de views em nossas transmissões online</p>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <section class="feedbacks" id="depoimentos" aria-label="O que dizem nossos clientes">
+    <h2 class="fb-title">O que dizem nossos clientes</h2>
+
+    <div class="fb-grid">
+      <!-- Depoimento 1 -->
+      <article class="fb-card">
+        <div class="fb-media">
+          <video
+            playsinline
+            controls
+            preload="metadata"
+            poster="assets/capa.webp"
+            aria-label="Depoimento de Executivo A — Petrobras"
+          >
+            <source src="assets/depoimentos/depoimento_01.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+        <h3 class="fb-name">Gerente Sênior</h3>
+      </article>
+
+      <!-- Depoimento 2 -->
+      <article class="fb-card">
+        <div class="fb-media">
+          <video
+            playsinline
+            controls
+            preload="metadata"
+            poster="assets/capa.webp"
+            aria-label="Depoimento de Executivo B — ENEVA"
+          >
+            <source src="assets/depoimentos/depoimento_02.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+        <h3 class="fb-name">Supervisora</h3>
+      </article>
+
+      <!-- Depoimento 3 -->
+      <article class="fb-card">
+        <div class="fb-media">
+          <video
+            playsinline
+            controls
+            preload="metadata"
+            poster="assets/capa.webp"
+            aria-label="Depoimento de Executivo C — Andritz"
+          >
+            <source src="assets/depoimentos/depoimento_03.mp4" type="video/mp4" />
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+        <h3 class="fb-name">Especialista em Performance</h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="bo-contact" id="contato" aria-label="Fale com a Blue Ocean">
+    <div class="bc-wrap">
+      <header class="bc-head">
+        <h2>Vamos acelerar seus negócios?</h2>
+        <p>Preencha os dados abaixo e fale com nosso time.</p>
+      </header>
+
+      <form class="bc-form" id="contactForm" novalidate>
+        <div class="bc-row">
+          <div class="bc-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <small class="bc-error">Informe seu nome.</small>
+          </div>
+
+          <div class="bc-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            <small class="bc-error">Informe um e-mail válido.</small>
+          </div>
+        </div>
+
+        <div class="bc-row">
+          <div class="bc-field">
+            <label for="area">Área de atuação</label>
+            <select id="area" name="area" required>
+              <option value="" selected disabled>Selecione...</option>
+              <option>Gás Natural</option>
+              <option>Energia (Renovável)</option>
+              <option>Energia (Não renovável)</option>
+              <option>Odontologia</option>
+              <option>Educação</option>
+              <option>Outra</option>
+            </select>
+            <small class="bc-error">Selecione a área de atuação.</small>
+          </div>
+        </div>
+
+        <div class="bc-field">
+          <label for="descricao">Descreva sua necessidade</label>
+          <textarea id="descricao" name="descricao" rows="6" placeholder="Conte, em poucas linhas, o objetivo do seu projeto, prazos e como podemos ajudar." required></textarea>
+          <small class="bc-error">Descreva brevemente sua necessidade.</small>
+        </div>
+
+        <!-- Honeypot anti-spam (oculto) -->
+        <input type="text" id="website" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+
+        <div class="bc-actions">
+          <button type="submit" class="bc-btn bc-btn-primary">Enviar via WhatsApp</button>
+          <a id="mailtoLink" class="bc-btn bc-btn-outline" href="mailto:contato@blueoceanevents.com.br">Enviar por e-mail</a>
+        </div>
+
+        <p class="bc-privacy">Ao enviar, você concorda em ser contatado pela Blue Ocean Events.</p>
+      </form>
+    </div>
+  </section>
+
+
+
+  
+
+
+
+
+  <footer class="bo-footer" role="contentinfo">
+    <div class="bo-footer__inner">
+      <!-- Coluna: Links Rápidos -->
+      <nav class="bo-footer__col" aria-label="Links rápidos">
+        <h4 class="bo-footer__title">Links rápidos</h4>
+        <ul class="bo-footer__links">
+          <li><a href="#Main">Pagina Inicial</a></li>
+          <li><a href="#Sobre">Sobre</a></li>
+          <li><a href="#Atuacao">Inscrições</a></li>
+          <li><a target="_blank" href="https://blueoceaneventos.com.br/gasenergyweek/">Gasenergyweek</a></li>
+          <li><a target="_blank" href="https://blueoceaneventos.com.br/oemenergy/">O&M energy</a></li>
+          <li><a href="#contato">Projetos Online</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      
+
+      <!-- Coluna: Redes -->
+      <div class="bo-footer__col" aria-label="Redes sociais">
+        <h4 class="bo-footer__title">Redes sociais</h4>
+        <ul class="bo-footer__social">
+          <li>
+            <a href="https://www.linkedin.com/company/blue-ocean-business-events/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <!-- Ícone LinkedIn (SVG) -->
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7 0h3.8v2.05h.05C12.05 8.9 13.57 8 15.7 8c4.08 0 4.83 2.69 4.83 6.19V23h-4v-7.02c0-1.68-.03-3.85-2.35-3.85-2.35 0-2.71 1.83-2.71 3.72V23h-4V8z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/blueoceaneventos/" target="_blank" rel="noopener" aria-label="Instagram">
+              <!-- Ícone Instagram (SVG) -->
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm11 2a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/BlueOceanBusinessEvents" target="_blank" rel="noopener" aria-label="Facebook">
+              <!-- Ícone Facebook (SVG) -->
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 5 3.66 9.13 8.44 9.88v-6.99H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.77l-.44 2.89h-2.33v6.99C18.34 21.13 22 17 22 12z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@BlueOceanBusinessEvents" target="_blank" rel="noopener" aria-label="YouTube">
+              <!-- Ícone YouTube (SVG) -->
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+                <path d="M23.5 6.2a3.02 3.02 0 00-2.13-2.13C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.37.57A3.02 3.02 0 00.5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 002.13 2.13C4.5 20.5 12 20.5 12 20.5s7.5 0 9.37-.57a3.02 3.02 0 002.13-2.13c.5-1.88.5-5.8.5-5.8s0-3.92-.5-5.8zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+              </svg>
+              <span>YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bo-footer__legal">
+      <p>© 2025 Blue Ocean Events. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
   <script>
-    // selecionado o idioma da PAgina
-    function Language(e){
-      alert(e);
-      console.log(e)
-    }
+    (function () {
+      const form = document.getElementById('contactForm');
+      const mailto = document.getElementById('mailtoLink');
+
+      // SUBSTITUA pelo número oficial (DDD + Brasil), apenas dígitos:
+      const WHATSAPP = "5511973872491"; // ex.: 5511999999999
+
+      function encodeBody(obj) {
+        const lines = [
+          "Novo contato via site • Blue Ocean Events",
+          "",
+          `Nome: ${obj.nome}`,
+          `E-mail: ${obj.email}`,
+          `Área de atuação: ${obj.area}`,
+          "",
+          "Descrição:",
+          obj.descricao
+        ];
+        return encodeURIComponent(lines.join('\n'));
+      }
+
+      function validateField(field) {
+        const wrapper = field.closest('.bc-field');
+        if (!wrapper) return true;
+        let valid = true;
+
+        if (field.hasAttribute('required')) {
+          if (!field.value || (field.type === 'email' && !field.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))) {
+            valid = false;
+          }
+        }
+        wrapper.classList.toggle('invalid', !valid);
+        return valid;
+      }
+
+      ['input','change','blur','keyup'].forEach(evt => {
+        form.addEventListener(evt, (e) => {
+          if (e.target.matches('input, select, textarea')) {
+            validateField(e.target);
+          }
+        }, true);
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // honeypot
+        const hp = form.querySelector('#website');
+        if (hp && hp.value) return; // provável bot
+
+        const data = {
+          nome: form.nome.value.trim(),
+          email: form.email.value.trim(),
+          area: form.area.value,
+          descricao: form.descricao.value.trim()
+        };
+
+        // validação básica
+        const fields = [form.nome, form.email, form.area, form.descricao];
+        const allValid = fields.map(validateField).every(Boolean);
+        if (!allValid) return;
+
+        const text = encodeBody(data);
+        const waUrl = `https://wa.me/${WHATSAPP}?text=${text}`;
+
+        // Abre WhatsApp com a mensagem formatada
+        window.open(waUrl, '_blank');
+
+        // Atualiza mailto com assunto + corpo
+        const subject = encodeURIComponent('Novo contato via site • Blue Ocean Events');
+        const body = text; // já está URL encoded
+        mailto.href = `mailto:contato@blueoceanevents.com.br?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      document.querySelectorAll('.partners .track').forEach(track => {
+        if (track.dataset.cloned) return;
+        track.innerHTML += track.innerHTML;  // duplica a sequência
+        track.dataset.cloned = 'true';
+      });
+    })();
   </script>
   <script>
-    const largura = window.innerWidth;
-    console.log(largura)
-    if(largura < 700){
-      let elemento = document.querySelector('#XXX');
-      elemento.src = 'assets/mobile.mp4'
+  (function () {
+    const track = document.querySelector('.marquee__track');
+    if (!track) return;
+
+    // Duplicar somente uma vez (evita duplicações em hot-reloads)
+    if (!track.dataset.cloned) {
+      track.innerHTML += track.innerHTML;
+      track.dataset.cloned = 'true';
     }
+  })();
+  </script>
+  <script>
+    function MenuMobile() {
+      let iconeMenu = document.querySelector('#divMenuMobile');
+      // pega o display calculado no CSS (mesmo que não esteja inline)
+      let displayAtual = window.getComputedStyle(iconeMenu).display;
+      let imgMEnu = document.querySelector('#menuMobile')
+      
+      if (displayAtual === 'none') {
+        iconeMenu.style.display = 'block';  // mostra
+        imgMEnu.style.display = 'none'
+        
+      } else {
+        iconeMenu.style.display = 'none';   // esconde
+        imgMEnu.style.display = 'block'
+      }
+    }
+
   </script>
 </body>
 </html>
