@@ -1,13 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Ocean - Projetos Online</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projetos Digitais | Blue Ocean</title>
+  <meta name="description" content="Projetos Digitais Blue Ocean — encontros entre empresas com audiência qualificada, conteúdo on-demand e posicionamento de autoridade."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .chip{ display:inline-flex; align-items:center; padding:.5rem 1rem; border-radius:9999px; border:1px solid; font-weight:600; font-size:.9rem; cursor:pointer; transition:.15s; }
+    .chip-active{ background:#4f46e5; color:#fff; border-color:#4f46e5; }
+    .chip-inactive{ background:#fff; color:#334155; border-color:#e2e8f0; }
+    .chip-inactive:hover{ background:#f8fafc; }
+    .rise{ animation: rise .6s ease-out both; }
+    @keyframes rise{ from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+  </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+    <div class="relative max-w-6xl mx-auto px-6 py-20">
+      <h1 class="text-3xl md:text-5xl font-semibold tracking-tight rise">
+        Projetos Digitais Blue Ocean — <span class="text-indigo-600">mais do que uma live.</span>
+      </h1>
+      <p class="mt-4 text-lg md:text-xl max-w-3xl rise">
+        Encontros entre empresas com seu mercado de interesse, <strong>audiência qualificada</strong>,
+        conteúdo <strong>on-demand</strong> e <strong>posicionamento de autoridade</strong> para sua marca.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3 rise">
+        <a href="#destaques" class="px-5 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700">Assista aos destaques</a>
+        <a href="#contato" class="px-5 py-3 rounded-lg bg-white border border-slate-200 font-semibold hover:bg-slate-100">Solicitar projeto sob medida</a>
+      </div>
+    </div>
+  </section>
 
-    <h1>Pagina em Construção</h1>
-    
+  <!-- INDICADORES -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl p-6 border border-slate-200 rise">
+        <p class="text-sm text-slate-500">Audiência qualificada</p>
+        <p class="text-3xl font-bold mt-2"><span data-count="18000">0</span>+</p>
+        <p class="text-sm text-slate-500">visualizações</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-slate-200 rise" style="animation-delay:.05s">
+        <p class="text-sm text-slate-500">Tempo médio assistido</p>
+        <p class="text-3xl font-bold mt-2"><span data-count="22">0</span> min</p>
+        <p class="text-sm text-slate-500">por transmissão</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-slate-200 rise" style="animation-delay:.1s">
+        <p class="text-sm text-slate-500">Leads pós-evento</p>
+        <p class="text-3xl font-bold mt-2"><span data-count="1200">0</span>+</p>
+        <p class="text-sm text-slate-500">contatos qualificados</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 border border-slate-200 rise" style="animation-delay:.15s">
+        <p class="text-sm text-slate-500">Especialistas convidados</p>
+        <p class="text-3xl font-bold mt-2"><span data-count="60">0</span>+</p>
+        <p class="text-sm text-slate-500">nomes de referência</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-wrap gap-2 items-center">
+      <button class="chip chip-active" data-filter="all">Todos</button>
+      <button class="chip chip-inactive" data-filter="trilhas">Trilhas do Conhecimento</button>
+      <button class="chip chip-inactive" data-filter="gas">Trilha Gás & Energia</button>
+      <button class="chip chip-inactive" data-filter="om">Trilha O&M Eólico e Solar</button>
+      <button class="chip chip-inactive" data-filter="cogesc">COGESC / Saúde</button>
+      <button class="chip chip-inactive" data-filter="bluetalks">Blue Talks</button>
+      <button class="chip chip-inactive" data-filter="confraria">Confraria</button>
+    </div>
+  </section>
+
+  <!-- DESTAQUES -->
+  <section id="destaques" class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl md:text-3xl font-semibold">Destaques</h2>
+    <p class="text-slate-600 mt-1">Seleção recente do nosso YouTube. Mais do que uma live: <strong>encontros estratégicos</strong> com prova de presença e lista de participantes.</p>
+
+    <div id="grid" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="max-w-6xl mx-auto px-6 py-12">
+    <div class="bg-white rounded-2xl border border-slate-200 p-8">
+      <h3 class="text-2xl font-semibold">Como funciona</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div>
+          <div class="text-indigo-600 font-bold">1. Briefing & Objetivo</div>
+          <p class="text-slate-600 mt-2">Definimos posicionamento, público e meta: audiência qualificada e autoridade para sua marca.</p>
+        </div>
+        <div>
+          <div class="text-indigo-600 font-bold">2. Curadoria & Convidados</div>
+          <p class="text-slate-600 mt-2">Formatos sob medida com especialistas e empresas do seu mercado de interesse.</p>
+        </div>
+        <div>
+          <div class="text-indigo-600 font-bold">3. Transmissão & Prova de Valor</div>
+          <p class="text-slate-600 mt-2">Conteúdo on-demand, lista de participantes para relacionamento e métricas claras.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contato" class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="bg-indigo-600 rounded-2xl p-8 md:p-12 text-white">
+      <h3 class="text-2xl md:text-3xl font-semibold">Pronto para marcar presença no seu mercado?</h3>
+      <p class="mt-2 text-indigo-100">Vamos desenhar um projeto digital exclusivo para sua marca — do conceito à prova de resultados.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a target="_blank" href="https://wa.me/5511973872491?text=Quero%20um%20projeto%20digital%20sob%20medida%20com%20audi%C3%AAncia%20qualificada."
+           class="px-5 py-3 rounded-lg bg-white text-indigo-700 font-semibold hover:bg-indigo-50">Solicitar parceria</a>
+        <a target="_blank" href="https://www.youtube.com/@BlueOceanBusinessEvents"
+           class="px-5 py-3 rounded-lg bg-indigo-500 text-white font-semibold hover:bg-indigo-400">Ver playlists no YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ---- dados dos vídeos (links enviados) + categorias
+    const videos = [
+      // trilha gas e energia:
+      { url: "https://www.youtube.com/watch?v=LDVn1g-Qem4&t=110s", title: "Trilha Gás & Energia — Destaque", cat: ["gas"] }, // destaque
+      { url: "https://www.youtube.com/live/eQAbs_U_vfU?si=qcBsH90fMdpUc73w", title: "Trilha do Gás e Energia - Aproveitamento do Gás Natural", cat: ["gas"] },
+      { url: "https://www.youtube.com/live/c4urN05NF80?si=2RK-s22GOsdD6nvO", title: "Trilha do Gás e Energia - Distribuição de GNL no Novo Mercado de Gás", cat: ["gas"] },
+      { url: "https://www.youtube.com/live/NShyUpaGMIE?si=p6pfq8QoWaWcuNPk", title: "Trilha do Gás Nova Lei do Gás: O papel da Distribuição Canalizada de Gás no Novo Mercado", cat: ["gas"] },
+      { url: "https://www.youtube.com/live/WctAhwnzdZQ?si=Wd6xiC2fA4Z_Bvbp", title: "Trilha do Gás e Energia - Transporte por Gasodutos na Nova Lei do Gás", cat: ["gas"] },
+      { url: "https://www.youtube.com/live/7jaxfnGmnus?si=8ywoP_8yWD5t3Lb7", title: "Trilha Gás e Energia Aprovada a Nova Lei do Gás!", cat: ["gas"] },
+      { url: "https://youtu.be/JT9LhkhyPQ0?si=XgvSCj2AcqUBd1pZ", title: "Trilha do Gás e Energia - Integração dos Transportes e Comercialização do Gás Natural", cat: ["gas"] },
+
+      // O&M
+      { url: "https://www.youtube.com/watch?v=AfzTKSvvQAs", title: "O&M Eólico e Solar — Case", cat: ["om"] },
+      { url: "https://www.youtube.com/live/5s7urWRCzRk?si=7hk4_UZ_8xntc06G", title: "O&M Episódio Especial Online Emerson | Workshop Técnico: Abrindo a Caixa Preta dos OEMs", cat: ["om"] },
+      { url: "https://www.youtube.com/live/aDYFaPenTC4?si=McyVGq96CDWy748y", title: "O&M Episódio Especial Online ONYX Insight | Estratégias para maximizar performance de turbinas eólicas", cat: ["om"] },
+      { url: "https://www.youtube.com/live/LI64YnL1if4?si=cRY7RyaYmGO3HctO", title: "O&M ESessão Especial - Jornada Online | Gestão de O&M em Pás Eólicas", cat: ["om"] },
+      { url: "https://www.youtube.com/live/jPz19C7mBpA?si=3zjq9ChIuenzkiWa", title: "O&M Fórum Gestão Operacional de Parques Eólicos - Gestão Integrada de O&M", cat: ["om"] },
+      { url: "https://www.youtube.com/live/yk-QXATPWro?si=1az0UREq88rXJ3YG", title: "O&M Fórum Gestão Operacional de Parques Solares - Evolução dos Desafios em O&M", cat: ["om"] },
+      { url: "https://www.youtube.com/live/GlG_yDUrK0w?si=awlkJXlSRGC2fdXe", title: "O&M Eólico e Solar — Case", cat: ["om"] },
+      { url: "https://www.youtube.com/live/GlG_yDUrK0w?si=Qr_tzt1CYE3LdFRe", title: "O&M Gestão Operacional de Parques Solares | Solar Power Asset Management & Performance", cat: ["om"] },
+      { url: "https://www.youtube.com/live/1IcUSamDCKU?si=TGEPcHIwfmIgypl1", title: "O&M Gestão Operacional de Parques Eólicos | Decodificando o Futuro do O&M", cat: ["om"] },
+      { url: "https://www.youtube.com/live/6IgbsbYklQs?si=juYZjE3s8ocx9Vnp", title: "O&M Fórum Gestão Operacional de Parques Eólicos - Campanha de Reparos em Pás", cat: ["om"] },
+      { url: "https://www.youtube.com/live/LDVn1g-Qem4?si=8MgTZNfj9JHXk_5A", title: "O&M Gestão Operacional de Parques Eólicos | WTG Maintenance 4.0", cat: ["om"] },
+      { url: "https://www.youtube.com/live/AfzTKSvvQAs?si=dsP63WMMhVIikWWn", title: "O&M Gestão Operacional de Parques Eólicos | Blade Maintenance 4.0", cat: ["om"] },
+      { url: "https://www.youtube.com/live/-Yr1nRJ8n8w?si=F5xdvi5PW6fMcu1W", title: "O&M Gestão Operacional de Parques Eólicos | Wind Asset Lifecycle Management", cat: ["om"] },
+      { url: "https://www.youtube.com/live/1tCJ7OS9lig?si=6ctHbVYV_yeWqfP6", title: "O&M Gestão Operacional de Parques Eólicos | O&M em Grandes Componentes", cat: ["om"] },
+      { url: "https://www.youtube.com/live/8SjH8aLOG8s?si=1y0LoBKp4hqav9XU", title: "O&M Gestão Operacional de Parques Eólicos | Wind O&M Digital", cat: ["om"] },
+      { url: "https://www.youtube.com/live/X73r4kjNcTE?si=Tdi_yOLtsOKyTXss", title: "O&M Gestão Operacional de Parques Eólicos | HSE & Supply Chain", cat: ["om"] },
+      { url: "https://www.youtube.com/live/2o5U6q1oB58?si=_jl1a3H1CSEQMEyD", title: "O&M Gestão Operacional de Parques Eólicos | Serviços Multibrand", cat: ["om"] },
+      { url: "https://www.youtube.com/live/FXmPB7gLa7E?si=XlNgS4RDUAsRSTr2", title: "O&M Gestão Operacional de Parques Eólicos | Blades O&M", cat: ["om"] },
+
+      // cogesc - online
+      { url: "https://www.youtube.com/live/xbPEm3SadYc?si=Z7qYrsWkj4AOjJzc", title: "Talkshow | Explorando Soluções Inovadoras para Gestão da Saúde Mental", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/ZNB_lGCDXoM?si=sB1vuEPdjA05Lj-W", title: "TalkShow COGESC - Atenção Primária à Saúde", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/lZKMT9BHDpE?si=USLkq3a6D4k1JSZM", title: "CONECTA COGESC - Talkshow Especial | Balanço 2021, Olhar 2022", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/ckyqr-0ExLk?si=bHF7Z99BGDHrCMRd", title: "ShowQuiz COGESC 4 - Criação de Resultados com Medicina Preventiva", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/yRXhnMWPK6A?si=sxaMIfLzkETIVX_m", title: "ShowCase 3 | Gestão de Grandes Ofensores", cat: ["cogesc"] },
+      { url: "https://youtu.be/w3X2mkEGoFI?si=J1dNXFJiZZrTv3JJ", title: "ShowQuiz COGESC 2 – Engajamento, Conscientização e Comunicação", cat: ["cogesc"] },
+      { url: "https://youtu.be/D_bUadI9QRk?si=H63j6BYxf6_a2FHf", title: "ShowQuiz COGESC 1 - Modelos de Gestão da Saúde Corporativa", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/vCDu7ok62nc?si=IBNRdnHfwg9aEJTL", title: "ShowCase COGESC 2 - Saúde Mental", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/ZWq7ZiPSdGw?si=2HEu3kDBixmFKSvK", title: "ShowCase COGESC | Inovação em Gestão em Saúde", cat: ["cogesc"] },
+      { url: "https://www.youtube.com/live/Br8E4wSf2aA?si=_SJGdxG0Dzw_vu3S", title: "Trilha do Conhecimento COGESC | Gestão de Dados", cat: ["cogesc"] },
+
+      // talks blue - videos 
+      { url: "https://youtu.be/MjE5IBoItaA?si=pY1wSECKdN4yzzQR", title: "Blue Talks - Infraestrutura, Regulação e Tarifas", cat: ["bluetalks"] },
+      { url: "https://youtu.be/65ARaOgSRZM?si=tBUWM4zvGSc0XDi8", title: "Blue Talks — Oportunidades com Projetos", cat: ["bluetalks"] },
+      { url: "https://youtu.be/qIEWkkq-Zbc?si=lm-_fQC4NYqEgnxd", title: "Blue Talks - Questões Regulatórias do Biometano", cat: ["bluetalks"] },
+      { url: "https://youtu.be/VQZAavf6bsI?si=rQG7q-H8GGu20hAM", title: "Blue Talks - Perspectivas para as Térmicas", cat: ["bluetalks"] },
+      { url: "https://www.youtube.com/live/23AvJedCJ58?si=VzsScsm6o89coQCJ", title: "Blue Talks | Desafios e Oportunidades na Intensificação", cat: ["bluetalks"] },
+      { url: "https://www.youtube.com/live/MLX4KCW--00?si=-dpKfdtUylZBaOo8", title: "Blue Talks | Upgrade de Usinas Térmicas", cat: ["bluetalks"] },
+      { url: "https://www.youtube.com/live/ScXKTEZU4eY?si=KtYetZ3T77Y-PEOE", title: "Blue Talks | Gás Natural e Gases de Baixo Carbono", cat: ["bluetalks"] },
+      { url: "https://youtu.be/wuIhYoogAFI?si=VjAX_28F4cbBZPMz", title: "Blue Talks | Questões Regulatórias e Tributárias em GNL e Biometano", cat: ["bluetalks"] },
+
+      // confraria
+      { url: "https://youtu.be/vluOqrfDpk8?si=urXNLKPfRVQ2yi7c", title: "Confraria COGESC | Episódio 1 – Saúde Mental", cat: ["confraria"] },
+      { url: "https://youtu.be/D4Z6ZK8cSZA?si=xwTwObFxmcRAnuMW", title: "Confraria COGESC | Episódio 2 – Ações Preventivas", cat: ["confraria"] },
+      { url: "https://youtu.be/UeZwVXvVRzs?si=xESp400SyuCoPYkJ", title: "Confraria COGESC | Episódio 3 – Atenção Primária", cat: ["confraria"] },
+      { url: "https://www.youtube.com/live/DrROGYAh0kA?si=6zr-e1zKLmTbT_3Z", title: "Confraria COGESC | Episódio 4 – Retomada", cat: ["confraria"] },
+    ];
+
+    // ---- extrai ID do youtube (vários formatos) ----
+    function ytId(u){
+      try{
+        // 1) padrão watch?v=
+        let m = u.match(/[?&]v=([^&]+)/);
+        if (m && m[1]) return m[1];
+
+        // 2) youtu.be/VIDEOID
+        m = u.match(/youtu\.be\/([A-Za-z0-9_-]{6,})/);
+        if (m && m[1]) return m[1];
+
+        // 3) youtube.com/live/VIDEOID
+        m = u.match(/\/live\/([A-Za-z0-9_-]{6,})/);
+        if (m && m[1]) return m[1];
+
+        // 4) youtube.com/shorts/VIDEOID
+        m = u.match(/\/shorts\/([A-Za-z0-9_-]{6,})/);
+        if (m && m[1]) return m[1];
+
+        return null;
+      } catch { return null; }
+    }
+
+    // ---- labels dos badges ----
+    function label(key){
+      return ({
+        trilhas:"Trilhas do Conhecimento",
+        gas:"Gás & Energia",
+        om:"O&M Eólico e Solar",
+        cogesc:"COGESC / Saúde",
+        bluetalks:"Blue Talks",
+        confraria:"Confraria"
+      })[key] || key;
+    }
+
+    // ---- render grid ----
+    const grid = document.getElementById("grid");
+
+    function cardHTML(v){
+      const id = ytId(v.url);
+      // thumbnail: se tiver ID, usa a do YouTube; senão, usa fallback
+      const thumb = id
+        ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
+        : `https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1200&auto=format&fit=crop`;
+
+      const badges = (v.cat || []).map(c =>
+        `<span class="text-xs px-2 py-1 rounded-full bg-slate-100 border border-slate-200">${label(c)}</span>`
+      ).join(" ");
+
+      return `
+        <article class="bg-white border border-slate-200 rounded-xl overflow-hidden group" data-cat="${(v.cat||[]).join(",")}">
+          <div class="relative overflow-hidden">
+            <img src="${thumb}" alt="${v.title}" class="w-full aspect-video object-cover transition group-hover:scale-[1.02]" loading="lazy" decoding="async">
+            <button onclick="openVideo('${id || ""}', '${encodeURIComponent(v.url)}')"
+              class="absolute inset-0 grid place-items-center bg-black/0 group-hover:bg-black/20 transition">
+              <span class="px-3 py-2 rounded-lg bg-white/90 text-slate-800 text-sm font-semibold">Assistir</span>
+            </button>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold">${v.title}</h4>
+            ${badges ? `<div class="mt-2 flex flex-wrap gap-2">${badges}</div>` : ""}
+          </div>
+        </article>
+      `;
+    }
+
+    function render(list=videos){
+      grid.innerHTML = list.map(cardHTML).join("");
+    }
+    render();
+
+    // ---- filtros ----
+    const chips = document.querySelectorAll("[data-filter]");
+    chips.forEach(ch=>{
+      ch.addEventListener("click", ()=>{
+        chips.forEach(c=>c.classList.replace("chip-active","chip-inactive"));
+        ch.classList.replace("chip-inactive","chip-active");
+        const f = ch.dataset.filter;
+        if (f==="all") { render(videos); return; }
+        render(videos.filter(v => (v.cat||[]).includes(f)));
+      });
+    });
+
+    // ---- abrir vídeo (fallback para quando não tiver ID extraído) ----
+    function openVideo(id, raw){
+      const url = id ? `https://www.youtube.com/watch?v=${id}` : decodeURIComponent(raw);
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+    window.openVideo = openVideo;
+
+    // ---- contador suave dos indicadores ----
+    function animateCounters(){
+      document.querySelectorAll("[data-count]").forEach(el=>{
+        const target = +el.getAttribute("data-count");
+        let cur = 0;
+        const step = Math.ceil(target/60);
+        const t = setInterval(()=>{
+          cur += step;
+          if(cur>=target){ cur = target; clearInterval(t); }
+          el.textContent = cur.toLocaleString("pt-BR");
+        }, 16);
+      });
+    }
+    const io = new IntersectionObserver((ents)=>{
+      ents.forEach(e=>{ if(e.isIntersecting){ animateCounters(); io.disconnect(); } });
+    });
+    io.observe(document.querySelector("section:nth-of-type(2)"));
+  </script>
 </body>
 </html>
